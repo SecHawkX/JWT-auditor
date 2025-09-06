@@ -39,6 +39,17 @@ This project helps identify these issues and provides **recommendations** to sec
 
 ---
 
+## ⚠️ Wordlist for Weak Secret Key Check
+
+This project uses a wordlist file `scraped-JWT-secrets.txt` for testing weak JWT secrets.  
+**Important:** For security reasons, this file is not included in the repository.
+
+You can create your own wordlist or download a sample from:
+
+- [SecLists on GitHub](https://github.com/danielmiessler/SecLists/blob/master/Passwords/scraped-JWT-secrets.txt)  
+- Create a text file named `scraped-JWT-secrets.txt` in the project root, each secret on a new line.
+
+
 ## 🏗️ Architecture
 
 ┌───────────────────┐        ┌────────────────────────┐        ┌───────────────────────┐
