@@ -113,10 +113,8 @@ def audit_jwt(token):
 def generate_report(token, header, payload, issues, recommendations, filename="jwt_report.pdf"):
     doc = SimpleDocTemplate(filename, pagesize=A4)
     
-    # Always get fresh styles
     styles = getSampleStyleSheet()
     
-    # Add custom style safely (with a new name to avoid conflicts)
     if "MyCode" not in styles:
         styles.add(ParagraphStyle(
             name="MyCode",
@@ -128,7 +126,7 @@ def generate_report(token, header, payload, issues, recommendations, filename="j
 
     story = []
 
-    # Now use the built-in Title style safely
+
     story.append(Paragraph("JWT Security Audit Report", styles["Title"]))
     story.append(Spacer(1, 20))
     story.append(Paragraph(f"Generated on: {datetime.datetime.now()}", styles["Normal"]))
